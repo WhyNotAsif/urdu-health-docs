@@ -1,88 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 40% 98%;
+    --foreground: 210 40% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 160 84% 30%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 160 30% 90%;
+    --secondary-foreground: 160 84% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 20% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 92% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 160 20% 85%;
+    --input: 160 20% 85%;
+    --ring: 160 84% 30%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom colors for health theme */
+    --health-green: 160 84% 30%;
+    --health-green-light: 160 60% 92%;
+    --health-blue: 200 80% 45%;
+    --health-blue-light: 200 60% 95%;
+    --health-orange: 35 92% 50%;
+    --health-orange-light: 35 80% 92%;
+    --table-header: 160 60% 25%;
+    --table-header-foreground: 0 0% 100%;
+    --table-row-odd: 160 30% 97%;
+    --table-row-even: 0 0% 100%;
+    --table-border: 160 30% 80%;
+
+    /* Gradients */
+    --gradient-header: linear-gradient(135deg, hsl(160 84% 30%), hsl(160 84% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(35 92% 50%), hsl(35 92% 60%));
+    --gradient-section: linear-gradient(180deg, hsl(160 60% 95%), hsl(0 0% 100%));
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 210 40% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 210 40% 12%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 210 40% 12%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 160 70% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 160 30% 20%;
+    --secondary-foreground: 160 40% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 30% 18%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 35 80% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --ring: 160 70% 45%;
+
+    --health-green: 160 70% 45%;
+    --health-green-light: 160 30% 15%;
+    --health-blue: 200 70% 50%;
+    --health-blue-light: 200 30% 15%;
+    --health-orange: 35 80% 55%;
+    --health-orange-light: 35 30% 15%;
+    --table-header: 160 50% 20%;
+    --table-header-foreground: 0 0% 100%;
+    --table-row-odd: 210 30% 12%;
+    --table-row-even: 210 30% 10%;
+    --table-border: 160 30% 30%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -99,7 +121,104 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-urdu;
+    font-feature-settings: "ss01", "liga";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-urdu-heading font-bold;
+  }
+}
+
+@layer components {
+  .urdu-table {
+    @apply w-full border-collapse text-sm md:text-base;
+  }
+
+  .urdu-table th {
+    @apply bg-table-header text-table-header-foreground p-2 md:p-3 text-right font-semibold border border-table-border;
+  }
+
+  .urdu-table td {
+    @apply p-2 md:p-3 border border-table-border text-right;
+  }
+
+  .urdu-table tr:nth-child(odd) td {
+    @apply bg-table-row-odd;
+  }
+
+  .urdu-table tr:nth-child(even) td {
+    @apply bg-table-row-even;
+  }
+
+  .section-card {
+    @apply bg-card rounded-xl shadow-lg border border-border overflow-hidden mb-6;
+  }
+
+  .section-header {
+    @apply bg-gradient-to-l from-primary to-primary/80 text-primary-foreground p-4 md:p-5;
+  }
+
+  .section-content {
+    @apply p-4 md:p-6;
+  }
+
+  .module-header {
+    @apply bg-gradient-to-l from-accent to-accent/80 text-accent-foreground p-4 md:p-6 rounded-xl mb-6 shadow-lg;
+  }
+
+  .question-row {
+    @apply flex flex-col md:flex-row md:items-start gap-2 md:gap-4 py-3 border-b border-border last:border-b-0;
+  }
+
+  .question-number {
+    @apply bg-primary/10 text-primary font-bold px-3 py-1 rounded-lg text-sm shrink-0;
+  }
+
+  .question-text {
+    @apply flex-grow text-foreground leading-relaxed;
+  }
+
+  .options-container {
+    @apply flex flex-wrap gap-2 mt-2 md:mt-0;
+  }
+
+  .option-badge {
+    @apply bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm;
+  }
+
+  .nav-link {
+    @apply text-foreground/80 hover:text-primary transition-colors duration-200 text-sm md:text-base;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
