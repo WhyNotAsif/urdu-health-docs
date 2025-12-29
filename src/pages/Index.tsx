@@ -59,8 +59,19 @@ const Index = () => {
               <Mail className="h-4 w-4" /> ای میل
             </span>
           </div>
-          <p className="text-xs text-muted-foreground mt-6">
-            © 2024 تمام حقوق محفوظ ہیں
+          <p className="text-sm text-muted-foreground mt-4">
+            Developed by:{" "}
+            <a 
+              href="https://github.com/WhyNotAsif" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              WhyNotAsif
+            </a>
+          </p>
+          <p className="text-xs text-muted-foreground mt-4">
+            © 2025 تمام حقوق محفوظ ہیں
           </p>
         </div>
       </footer>
