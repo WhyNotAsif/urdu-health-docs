@@ -20,24 +20,6 @@ A comprehensive **Urdu (اردو)** translation of the Health Facility Assessmen
 - **Vite** - Build tool
 - **shadcn/ui** - UI components
 
-## 🚀 Getting Started
-
-```bash
-# Clone the repository
-git clone <YOUR_GIT_URL>
-
-# Navigate to project directory
-cd <YOUR_PROJECT_NAME>
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-## 📱 Screenshots
-
 The application is fully responsive and works seamlessly on:
 - Desktop browsers
 - Tablets
