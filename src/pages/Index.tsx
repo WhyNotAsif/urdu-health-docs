@@ -62,7 +62,7 @@ const Index = () => {
           <p className="text-sm text-muted-foreground mt-4">
             Developed by:{" "}
             <a 
-              href="https://github.com/WhyNotAsif" 
+              href="https://github.com/WhyNotAsif/urdu-health-docs" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:underline font-medium"
